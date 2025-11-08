@@ -1,0 +1,311 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI_EveryWhere_Official — Build, Learn & Launch with AI</title>
+  <meta name="description" content="AI_EveryWhere_Official builds custom AI apps & automations, creates AI-generated videos, and teaches practical AI tools. Book a demo and start today." />
+  <meta property="og:title" content="AI_EveryWhere_Official" />
+  <meta property="og:description" content="Custom AI apps, automations, training, videos, prompts & tools — all in one place." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;        /* deep navy */
+      --bg-soft:#0f172a;   /* secondary bg */
+      --card:#0f1b33;      /* card surface */
+      --text:#e5e7eb;      /* text */
+      --muted:#94a3b8;     /* muted text */
+      --brand:#8b5cf6;     /* purple */
+      --brand-2:#06b6d4;   /* cyan */
+      --accent:#22c55e;    /* green */
+      --max:1180px;        /* content width */
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg) 0%, #0b1328 60%, #0b0f1a 100%);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    /* header */
+    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid rgba(148,163,184,.12)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 120deg at 50% 50%, var(--brand), var(--brand-2), var(--accent), var(--brand));box-shadow:0 6px 18px rgba(34,197,94,.2)}
+    .menu{display:flex;gap:22px;align-items:center}
+    .menu a{font-weight:500;color:var(--muted)}
+    .menu a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:linear-gradient(90deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);font-weight:700}
+    .btn:hover{filter:brightness(1.05)}
+    .ghost{background:transparent;border:1px solid rgba(148,163,184,.28);box-shadow:none}
+
+    /* hero */
+    .hero{padding:88px 0 56px;border-bottom:1px solid rgba(148,163,184,.12);background:
+      radial-gradient(800px 400px at 10% -10%, rgba(139,92,246,.25), transparent 60%),
+      radial-gradient(600px 300px at 90% 0%, rgba(6,182,212,.18), transparent 60%);
+    }
+    .hero h1{font-size:48px;line-height:1.05;margin:0 0 14px;font-weight:800}
+    .gradient{background:linear-gradient(90deg,#fff, #c7d2fe 30%, #99f6e4 60%, #86efac);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:var(--muted);max-width:760px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+    /* badges */
+    .badges{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .badge{padding:8px 12px;border-radius:999px;border:1px solid rgba(148,163,184,.25);font-size:13px;color:#cbd5e1;background:rgba(15,27,51,.6)}
+
+    /* sections */
+    section{padding:70px 0}
+    h2{font-size:32px;margin:0 0 10px}
+    .lead{color:var(--muted);margin:0 0 26px}
+
+    /* cards grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.15);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .card h3{margin:10px 0 6px;font-size:18px}
+    .card p{color:var(--muted);font-size:14px}
+    .card .icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.35)}
+
+    /* pricing */
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){.price-grid{grid-template-columns:1fr}}
+    .price{background:linear-gradient(180deg, rgba(34,197,94,.07), rgba(6,182,212,.06));border:1px solid rgba(148,163,184,.18);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .price h3{margin:0 0 8px}
+    .price .num{font-size:30px;font-weight:800}
+    .price ul{margin:14px 0 18px;padding-left:18px;color:#cbd5e1}
+
+    /* footer */
+    footer{padding:40px 0;border-top:1px solid rgba(148,163,184,.12);color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .tiny{font-size:12px;color:#94a3b8}
+
+    /* mobile menu */
+    .hamburger{display:none}
+    @media (max-width:820px){
+      .menu{display:none}
+      .hamburger{display:inline-flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid rgba(148,163,184,.25);border-radius:12px;background:transparent;color:#fff}
+      #mobile{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(11,18,32,.95);border-bottom:1px solid rgba(148,163,184,.15)}
+      #mobile a{display:block;padding:14px 20px;border-top:1px solid rgba(148,163,184,.1);color:#cbd5e1}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> AI_EveryWhere_Official</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Case Studies</a>
+        <a href="#resources">Resources</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="mailto:prabhakar.2013.t+hello@gmail.com">Book a demo</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMobile()" aria-label="Open menu">☰ Menu</button>
+    </div>
+    <div id="mobile">
+      <a href="#services" onclick="toggleMobile()">Services</a>
+      <a href="#work" onclick="toggleMobile()">Case Studies</a>
+      <a href="#resources" onclick="toggleMobile()">Resources</a>
+      <a href="#pricing" onclick="toggleMobile()">Pricing</a>
+      <a href="#contact" onclick="toggleMobile()">Contact</a>
+      <a href="mailto:prabhakar.2013.t+hello@gmail.com" onclick="toggleMobile()">Book a demo</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1><span class="gradient">Build, learn & launch with AI — everywhere.</span></h1>
+        <p>
+          We turn ideas into practical AI. From custom copilots and automations to AI‑generated video and team training, AI_EveryWhere_Official makes modern AI tools useful for your business—fast.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#contact">Get started</a>
+          <a class="btn ghost" href="#resources">Explore resources</a>
+        </div>
+        <div class="badges" aria-label="Highlights">
+          <span class="badge">Custom AI Apps & Bots</span>
+          <span class="badge">Video Generation</span>
+          <span class="badge">Prompt Engineering</span>
+          <span class="badge">Workshops & Training</span>
+          <span class="badge">Integrations & APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="lead">Everything you need to adopt AI with confidence—delivered end‑to‑end.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3>Custom AI Apps & Copilots</h3>
+            <p>We design and ship chatbots, assistants, and internal copilots tailored to your workflows—secure, reliable, and measurable.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Automations & Integrations</h3>
+            <p>Connect CRMs, ticketing, analytics and data sources with AI using APIs and no‑code/low‑code tools. Save hours every week.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎬</div>
+            <h3>AI‑Generated Video</h3>
+            <p>Create product explainers, shorts, and training content with AI voices, avatars, and editing pipelines.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Prompt Engineering</h3>
+            <p>Design robust prompt systems, evaluation, and guardrails for consistent, trustworthy results.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📚</div>
+            <h3>Training & Workshops</h3>
+            <p>Hands‑on sessions to upskill teams on today’s best AI tools with practical playbooks and templates.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧩</div>
+            <h3>Tool Selection & Onboarding</h3>
+            <p>We audit needs, pick the right stack, and roll it out with documentation and change‑management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+        <h2>Case Studies</h2>
+        <p class="lead">Recent highlights. Ask for a full portfolio.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Sales Copilot for B2B SaaS</h3>
+            <p>Reduced lead response time by 72% with CRM‑aware assistant and automated follow‑ups.</p>
+          </div>
+          <div class="card">
+            <h3>Training Video Pipeline</h3>
+            <p>Shipped weekly product updates as AI videos; cut production from 8 hours to 25 minutes.</p>
+          </div>
+          <div class="card">
+            <h3>Support Automation</h3>
+            <p>Auto‑triage & suggested replies integrated with helpdesk; first‑response accuracy 90%+.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources">
+      <div class="container">
+        <h2>Resources</h2>
+        <p class="lead">Guides, prompts, and tutorials to help you move fast.</p>
+        <div class="grid">
+          <div class="card"><h3>Prompt Library</h3><p>Battle‑tested prompts for marketing, sales, support, and ops.</p></div>
+          <div class="card"><h3>Tool Guides</h3><p>Practical walkthroughs of today’s top AI tools and best practices.</p></div>
+          <div class="card"><h3>Video Tutorials</h3><p>Short, clear videos that show workflows from idea to output.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p class="lead">Simple packages to start. Custom quotes available.</p>
+        <div class="price-grid">
+          <div class="price">
+            <h3>Starter</h3>
+            <div class="num">$0–499</div>
+            <ul>
+              <li>Strategy call (30 min)</li>
+              <li>Tool stack recommendations</li>
+              <li>Templates & quick‑start prompts</li>
+            </ul>
+            <a class="btn" href="mailto:prabhakar.2013.t+hello@gmail.com?subject=Starter%20Plan">Choose Starter</a>
+          </div>
+          <div class="price">
+            <h3>Pro</h3>
+            <div class="num">$500–2,500</div>
+            <ul>
+              <li>One custom bot or automation</li>
+              <li>Training for your team</li>
+              <li>Documentation & handover</li>
+            </ul>
+            <a class="btn" href="mailto:prabhakar.2013.t+hello@gmail.com?subject=Pro%20Plan">Choose Pro</a>
+          </div>
+          <div class="price">
+            <h3>Enterprise</h3>
+            <div class="num">Custom</div>
+            <ul>
+              <li>Multiple assistants & integrations</li>
+              <li>Security, SSO & analytics</li>
+              <li>Ongoing support & SLAs</li>
+            </ul>
+            <a class="btn" href="mailto:prabhakar.2013.t+hello@gmail.com?subject=Enterprise%20Plan">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="lead">Ready to explore a project or training? Email us and we’ll reply within 24 hours.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Email</h3>
+            <p><a class="btn" href="mailto:prabhakar.2013.t+hello@gmail.com">prabhakar.2013.t+hello@gmail.com</a></p>
+            <p class="tiny">Use this address now. You can swap to a branded domain later (e.g. hello@aieverywhereofficial.com).</p>
+          </div>
+          <div class="card">
+            <h3>Newsletter</h3>
+            <p>Get new prompts, tools and tutorials.</p>
+            <form action="https://formsubmit.co/prabhakar.2013.t+hello@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Newsletter signup" />
+              <input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.35);background:rgba(255,255,255,.02);color:#fff;" />
+              <div style="height:10px"></div>
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+            <p class="tiny">Powered by FormSubmit — free and no backend required. Replace with your own provider anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><span class="logo"></span> AI_EveryWhere_Official</div>
+        <p class="tiny">© <span id="year"></span> AI_EveryWhere_Official. All rights reserved.</p>
+      </div>
+      <div>
+        <p class="tiny">Pages</p>
+        <p><a href="#services">Services</a><br/><a href="#work">Case Studies</a><br/><a href="#resources">Resources</a><br/><a href="#pricing">Pricing</a></p>
+      </div>
+      <div>
+        <p class="tiny">Contact</p>
+        <p><a href="mailto:prabhakar.2013.t+hello@gmail.com">Email us</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleMobile = () => {
+      const m = document.getElementById('mobile');
+      m.style.display = m.style.display === 'block' ? 'none' : 'block';
+    };
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
